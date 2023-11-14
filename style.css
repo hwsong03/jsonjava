@@ -1,0 +1,162 @@
+/* General styling */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #000;
+    color: #fff; 
+    margin: 0;
+    padding: 20px;
+}
+
+/* Header and navigation styles */
+.header {
+    background-color: #333; 
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 5px 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Portfolio container styling */
+.portfolio {
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: #222; 
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+}
+
+/* Title styling */
+h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #fff; 
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* Filter button styling */
+.filter-buttons {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.filter-button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: none;
+    background-color: #555; 
+    color: #fff; 
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1em; 
+    font-weight: bold; 
+}
+
+.filter-button:hover {
+    background-color: #777; 
+    transform: scale(1.05); 
+}
+
+/* Portfolio items styling */
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.item {
+    flex: 1;
+    min-width: 300px; 
+    max-width: calc(33.333% - 40px); 
+    background: #333; 
+    color: #fff; 
+    border: 1px solid #444; 
+    border-radius: 10px;
+    overflow: hidden; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* Iframe styling */
+.item iframe {
+    width: 100%;
+    height: 500px; 
+    border: none;
+}
+
+/* Text styling within items */
+.item h2, .item p {
+    padding: 15px;
+    margin: 0;
+    background-color: #000; 
+}
+
+/* Distinguishing dates and institution names */
+.institution-name {
+    color: #76b900; 
+    font-weight: bold; 
+}
+
+.date {
+    color: #c0c0c0; 
+    font-style: italic; 
+}
+
+/* Media query adjustments for smaller screens */
+@media (max-width: 768px) {
+    .item {
+        max-width: calc(50% - 40px);
+    }
+
+    .portfolio {
+        padding: 20px;
+    }
+
+    .filter-buttons, .header {
+        text-align: center;
+    }
+
+    .navigation {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .item {
+        max-width: 100%;
+    }
+
+    body, .header, .portfolio {
+        padding: 10px;
+    }
+
+    .navigation {
+        justify-content: center;
+    }
+}
